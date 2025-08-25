@@ -1,5 +1,3 @@
-# Beat-The-Bookie
-
 # ⚽ Beat the Bookie  
 
 > Using Machine Learning to Predict English Premier League (EPL) Football Match Outcomes  
