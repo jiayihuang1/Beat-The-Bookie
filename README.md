@@ -89,13 +89,25 @@ Combines match statistics, web-scraped financial data, a custom ELO rating syste
 
 ### Regression Models (Expected Match Value)
 
-| Model | Shot-based | Non-shot-based |
-|---|---|---|
-| Linear Regression | Tested | **Selected** |
-| Random Forest | Tested (high gen. loss) | Tested (high gen. loss) |
-| Support Vector Machine | **Selected** | Tested |
+**Shot-based xM** — SVM selected for lowest generalisation loss despite similar training MSE:
+
+![Shot-based Regression Comparison](assets/shot_regression_comparison.png)
+
+**Non-shot-based xM** — Linear Regression selected; Random Forest overfits heavily:
+
+![Non-shot Regression Comparison](assets/nonshot_regression_comparison.png)
+
+### Feature Correlation
+
+Heatmap of engineered features — low inter-feature correlation confirms independent signals:
+
+![Feature Correlation Heatmap](assets/correlation_heatmap.png)
 
 ### Classification Models
+
+**Model comparison** — LDA achieves the best testing accuracy with near-zero generalisation loss, while Random Forest overfits:
+
+![Classification Model Comparison](assets/classification_comparison.png)
 
 | Model | Training Accuracy | Testing Accuracy | Selected |
 |---|---|---|---|
